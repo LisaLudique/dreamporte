@@ -99,7 +99,15 @@ DATABASES = {
     }
 }
 
-
+WIKI_MARKDOWN_KWARGS = {
+    'extensions': [
+        'footnotes',
+        'attr_list',
+        'headerid',
+        'extra',
+        'codehilite',
+    ]
+}
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
