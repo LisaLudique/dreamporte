@@ -66,7 +66,7 @@ ROOT_URLCONF = 'dreamporte_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['wiki/templates/wiki'],
+        'DIRS': [BASE_DIR + '/templates/',],
         'APP_DIRS': True,
         # ...
         'OPTIONS': {
