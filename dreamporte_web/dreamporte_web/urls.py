@@ -24,11 +24,8 @@ from django.conf.urls import patterns
 from dreamporte_web.views import homepage
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-]
-
-urlpatterns += [
-    url(r'^notifications/', get_nyt_pattern()),
     url(r'^homepage/', homepage),
+    url(r'^notifications/', get_nyt_pattern()),
     url(r'', get_wiki_pattern()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
