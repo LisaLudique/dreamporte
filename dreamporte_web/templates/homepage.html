@@ -2,15 +2,14 @@
 {% load sekizai_tags i18n wiki_tags static %}
 
 {% block wiki_contents %}
-
+<link href="{% static "homepage.css" %}" rel="stylesheet">
     <h1 class="animated fadeIn">
-    <span class="small-line">
-      Welcome to Dreamporte
-    </span>
     <span class="big-line">
-      CINEMATIC VR
-      <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'wiki:search' %}">
+      Welcome to Dreamporte</span>
+
+      
+          <form id="hsearch" method="GET" action="{% url 'wiki:search' %}">
+            
             <div class="input-group">
               <input type="search" class="form-control search-query" name="q" placeholder="{% trans "Search..." %}" />
               <span class="input-group-btn">
@@ -20,16 +19,62 @@
               </span>
             </div><!-- /input-group -->
           </form>
+              
+                
     </span>
   </h1>
 
-    <link href="{% static "homepage.css" %}" rel="stylesheet">
 
-    <div class="card transition">
+    <!-- <div class="card transition">
           <h2 class="transition">Awesome Headline</h2>
           <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
           <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
           <div class="card_circle transition"></div>
+    </div> -->
+
+
+
+<ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">Flex</div>
+        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
     </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--river"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Grow</div>
+        <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--record"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Shrink</div>
+        <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--flowers"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Basis</div>
+        <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+</ul>
 {% endblock %}
 
