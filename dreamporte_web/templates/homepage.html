@@ -1,27 +1,35 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Homepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+{% extends "wiki/base.html" %}
+{% load sekizai_tags i18n wiki_tags static %}
+
+{% block wiki_contents %}
+
+    <h1 class="animated fadeIn">
+    <span class="small-line">
+      Welcome to Dreamporte
+    </span>
+    <span class="big-line">
+      CINEMATIC VR
+      <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'wiki:search' %}">
+            <div class="input-group">
+              <input type="search" class="form-control search-query" name="q" placeholder="{% trans "Search..." %}" />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <span class="fa fa-search"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->
+          </form>
+    </span>
+  </h1>
+
     <link href="{% static "homepage.css" %}" rel="stylesheet">
 
-  </head>
-
-  <body>
-
-    
     <div class="card transition">
-      <h2 class="transition">Awesome Headline</h2>
-      <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
-      <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
-      <div class="card_circle transition"></div>
+          <h2 class="transition">Awesome Headline</h2>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
+          <div class="card_circle transition"></div>
     </div>
-
-
-  </body>
-</html>
+{% endblock %}
 

@@ -28,7 +28,7 @@ urlpatterns = [
 
 urlpatterns += [
     url(r'^notifications/', get_nyt_pattern()),
-    url(r'^homepage/$', homepage),
+    url(r'^homepage/', homepage),
     url(r'', get_wiki_pattern()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
