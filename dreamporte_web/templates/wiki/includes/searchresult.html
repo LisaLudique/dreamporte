@@ -16,6 +16,23 @@
     {% endif %}
     <p class="muted"><small>{{ article.current_revision.content|get_content_snippet:search_query }}</small></p>
   </td>
+  <td>
+    {{ article.current_revision.user_message }}
+  </td>
+  <td>
+    <!-- {% with article.urlpath_set.first as urlpath %}
+    {% with urlpath.cached_ancestors|slice:"-3:-1" as n %}
+    {% for a in urlpath.cached_ancestors %}
+    {{a.article.current_revision.title}} -->
+    <!--  {% endfor %} -->
+      {{urlpath.cached_ancestors.1.article.current_revision.title}}
+      <!-- {{n.0.article.current_revision.user_message|truncatechars:25 }} -->
+      <!-- {{ urlpath.cached_ancestors.0.article.current_revision.user_message|truncatechars:25 }} -->
+    {% endwith %}
+    {% endwith %}
+
+    {{ article.urlpath_set.0.path}}
+  </td>
   <td style="white-space: nowrap">
     {{ article.current_revision.created|naturaltime }}
   </td>

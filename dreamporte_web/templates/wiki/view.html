@@ -1,9 +1,21 @@
 {% extends "wiki/article.html" %}
-{% load wiki_tags i18n sekizai_tags %}
+{% load wiki_tags i18n sekizai_tags humanize %}
 
 
 {% block wiki_contents_tab %}
 
+  <div class="list-group">
+  
+  {% for child in children_slice %}
+      <a href="{% url 'wiki:get' path=child.path %}" class="list-group-item list-group-item-action">
+        <h5 class="list-group-item-heading"> {{ child.article.current_revision.title }}</h5>
+        <p class="list-group-item-text"> {{ child.article.current_revision.user_message }}</p>
+      </a>
+        {% empty %}
+      {% endfor %}
+      {% if children_slice_more %}
+      <li><a href="#"><em>{% trans "...and more" %}</em></a></li>
+      {% endif %}
+  </div>
   {% wiki_render article %}
-
 {% endblock %}
