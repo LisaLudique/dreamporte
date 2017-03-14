@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'wiki.plugins.notifications',
     'wiki.plugins.images',
     'wiki.plugins.macros',
+    'star_ratings',
 ]
 
 MIDDLEWARE_CLASSES = [
