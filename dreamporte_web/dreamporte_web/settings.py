@@ -26,7 +26,7 @@ SECRET_KEY = 'b!iek)u**^*&b9qc%!rhlpm*l4mgf(s20q-60e-xt1xa&0p&!#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["dreamporte.pythonanywhere.com"]
 
 
 # Application definition
@@ -146,6 +146,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = ''
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
-
+MEDIA_ROOT = ''
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'

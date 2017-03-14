@@ -2,14 +2,14 @@
 {% load sekizai_tags i18n wiki_tags static %}
 
 {% block wiki_contents %}
-<link href="{% static "homepage.css" %}" rel="stylesheet">
+<link href="{% static 'homepage.css' %}" rel="stylesheet">
     <h1 class="animated fadeIn">
     <span class="big-line">
       Welcome to Dreamporte</span>
 
-      
+
           <form id="hsearch" method="GET" action="{% url 'wiki:search' %}">
-            
+
             <div class="input-group">
               <input type="search" class="form-control search-query" name="q" placeholder="{% trans "Search..." %}" />
               <span class="input-group-btn">
@@ -19,8 +19,8 @@
               </span>
             </div><!-- /input-group -->
           </form>
-              
-                
+
+
     </span>
   </h1>
 

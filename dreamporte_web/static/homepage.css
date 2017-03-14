@@ -1,6 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,200');
 body {   font-family: Helvetica, san-serif;
-  
+
 
 background: #000000; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
@@ -11,7 +11,7 @@ background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, F
  h1 .small-line{font-size:18px;color:#fff;letter-spacing:15px}
  h1 .big-line{font-size:1.75em;color:#fff;letter-spacing:15px}
 
- 
+
 }
 body {
   color: #999999;
@@ -131,23 +131,23 @@ img {
   }
 }
 .card__image--earth-sci {
-  background-image: url('../static/homepage_images/earth-sci.jpg');
+  background-image: url('/static/homepage_images/earth-sci.jpg');
 }
 .card__image--env-sci {
-  background-image: url('../static/homepage_images/env-sci.jpg');
+  background-image: url('/static/homepage_images/env-sci.jpg');
 }
 .card__image--life-sci {
-  background-image: url('../static/homepage_images/life-sci.jpg');
+  background-image: url('/static/homepage_images/life-sci.jpg');
   /*background-image: url(https://unsplash.it/800/600?image=39);*/
 }
 .card__image--ancient-civ {
-  background-image: url('../static/homepage_images/ancient-civ.jpg');
+  background-image: url('/static/homepage_images/ancient-civ.jpg');
 }
 .card__image--modern-issues {
-  background-image: url('../static/homepage_images/modern-issues.jpg');
+  background-image: url('/static/homepage_images/modern-issues.jpg');
 }
 .card__image--culture-and-religion {
-  background-image:url('../static/homepage_images/culture-and-religion.jpg');
+  background-image:url('culture-and-religion.jpg');
 }
 .card__title {
   color: #696969;
