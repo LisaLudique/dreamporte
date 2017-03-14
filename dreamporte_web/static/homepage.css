@@ -130,18 +130,24 @@ img {
     padding-top: 66.6%;
   }
 }
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
+.card__image--earth-sci {
+  background-image: url('../static/homepage_images/earth-sci.jpg');
 }
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
+.card__image--env-sci {
+  background-image: url('../static/homepage_images/env-sci.jpg');
 }
-.card__image--life {
-  background-image: url(https://unsplash.it/800/600?image=581);
+.card__image--life-sci {
+  background-image: url('../static/homepage_images/life-sci.jpg');
   /*background-image: url(https://unsplash.it/800/600?image=39);*/
 }
-.card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
+.card__image--ancient-civ {
+  background-image: url('../static/homepage_images/ancient-civ.jpg');
+}
+.card__image--modern-issues {
+  background-image: url('../static/homepage_images/modern-issues.jpg');
+}
+.card__image--culture-and-religion {
+  background-image:url('../static/homepage_images/culture-and-religion.jpg');
 }
 .card__title {
   color: #696969;
