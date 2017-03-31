@@ -1,17 +1,18 @@
 {% extends "wiki/article.html" %}
 {% load wiki_tags i18n sekizai_tags humanize %}
-
+{% load ratings %}
 
 {% block wiki_contents_tab %}
 
   <div class="list-group">
-  
+
   {% for child in children_all %}
       <a href="{% url 'wiki:get' path=child.path %}" class="list-group-item list-group-item-action">
         <h5 class="list-group-item-heading"> {{ child.article.current_revision.title }}</h5>
         <p class="list-group-item-text"> {{ child.article.current_revision.user_message }}</p>
       </a>
         {% empty %}
+            {% ratings article %}
       {% endfor %}
   </div>
   {% wiki_render article %}

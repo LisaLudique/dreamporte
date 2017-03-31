@@ -1,6 +1,6 @@
 {% extends "wiki/base.html" %}
 {% load wiki_tags i18n sekizai_tags static %}
-{% load ratings %}
+<!--{% load ratings %}-->
 
 
 {% block wiki_pagetitle %}{{ article.current_revision.title }}{% endblock %}
@@ -28,7 +28,7 @@
       {% include "wiki/includes/article_menu.html" %}
     </ul>
     <div>
-      {% ratings article %}
+      <!--{% ratings article %}-->
       {% block wiki_contents_tab %}
       {% endblock %}
     </div>
